@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.23" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )" uuid="a39b048c-3e9f-418f-8c1e-9504704d072c">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/coursedb</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfd8dfc5dfc5dfde</user-password>
+    <schema-pattern>coursedb.*</schema-pattern>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/JDBC/mysql-connector-java-5.1.35-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/JDBC/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="coursedb"/>
+    <table name="cars" schema="" catalog="coursedb" type="TABLE">
+      <column name="carID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="clientID" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="make" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="model" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="year" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="vin" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="carID"/>
+      <index name="carID_UNIQUE" unique="true" columns="carID"/>
+    </table>
+    <table name="orders" schema="" catalog="coursedb" type="TABLE">
+      <column name="orderID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="carID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
+      <column name="orderCost" sqlType="FLOAT" length="12" precision="0" nullable="true" jdbcType="7"/>
+      <column name="orderStatus" sqlType="CHAR" length="13" precision="0" nullable="true" jdbcType="1"/>
+      <column name="description" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="orderID"/>
+      <index name="orderID_UNIQUE" unique="true" columns="orderID"/>
+    </table>
+    <table name="users" schema="" catalog="coursedb" type="TABLE">
+      <column name="clientID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="firstName" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="lastName" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="dateOfBirth" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91"/>
+      <column name="address" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" length="13" precision="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="clientID"/>
+      <index name="userID_UNIQUE" unique="true" columns="clientID"/>
+    </table>
+  </data-source>
+</component>
