@@ -1,1 +1,7 @@
-This file was created by IntelliJ IDEA 12.1.7 for binding GitHub repository
+Для запуска приложения необходимо:
+- mysql сервер
+- восстановить БД из дампа, находящегося в папке databaseDump. Название БД - coursedb
+- скачать содержимое репозитория;
+- открыть папку out\artifacts;
+- скопировать папку course_war_exploded и поместить в контейнер сервлетов (тестировалось на Tomcat 8: необходимо поместить в папку webapps, в браузере заходить по адресу
+localhost:8080/course_war_expoded). Для удобства папку можно переименовать. 
